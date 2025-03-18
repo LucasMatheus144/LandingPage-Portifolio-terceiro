@@ -34,3 +34,59 @@
 
         requestAnimationFrame(animation);
     }
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const navbar = document.querySelector(".navbar");
+
+        menuIcon.addEventListener("click", function () {
+            navbar.classList.toggle("active");
+        });
+    });
+
+
+    function setFormSubmitted() {
+        sessionStorage.setItem("formSubmitted", "true"); // Usa sessionStorage para manter o valor apenas até fechar o navegador
+    }
+    
+    function checkFormSubmission() {
+        console.log("Verificando envio do formulário...");
+    
+        if (sessionStorage.getItem("formSubmitted") === "true") {
+            console.log("Exibindo pop-up de sucesso");
+            showAlert();
+            sessionStorage.removeItem("formSubmitted"); // Remove o status após exibir o pop-up
+        }
+    }
+    
+    function showAlert() {
+        var alerta = document.getElementById('Alerta');
+        if (alerta) {
+            alerta.style.display = 'flex'; // Exibe o alerta
+            alerta.classList.add('active'); // Adiciona classe de exibição
+    
+            // Fecha automaticamente após 8 segundos
+            setTimeout(hideAlert, 8000);
+        }
+    }
+    
+    function hideAlert() {
+        var alerta = document.getElementById('Alerta');
+        if (alerta) {
+            alerta.classList.remove('active'); // Inicia a animação de fechamento
+            setTimeout(() => {
+                alerta.style.display = 'none';
+            }, 500); // Aguarda a conclusão da animação antes de ocultar completamente
+        }
+    }
+    
+    // Fecha o alerta manualmente ao clicar no botão de fechar
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.custom-alerta .close').forEach(icon => {
+            icon.addEventListener('click', hideAlert);
+        });
+    
+        checkFormSubmission(); // Verifica se o formulário foi enviado ao carregar a página
+    });
+    

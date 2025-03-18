@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
+    <title>Dr.GlaucoMarques</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="icon" type="image/icon" href="assets/imgs/icone.ico">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
+    <div class="custom-alerta success" id="Alerta">
+        <div class="alerta-content">
+            <i class="fas fa-check check"></i>
+            <div class="message">
+                <span class="text text-1">Sucesso</span>
+                <span class="text text-2">E-mail enviado!</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark close" onclick="hideAlert()"></i>
+        <div class="progress active"></div>
+    </div>
+
     <header class="header">
         <a href="#" class="logo"><span>Glauco Marques</span></a>
         
@@ -28,10 +41,9 @@
             <img src="assets/imgs/pai.jpg" alt="">
         </div>
         <div class="home-content">
-            <h1>Ola, Eu sou o <span>Glauco</span></h1>
+            <h1>Olá, sou o <span>Glauco</span></h1>
             <h3 class="text-animation">E eu sou <span></span></h3>
             <p>Sou um dos sócios da Aconsel, um escritório de advocacia empresarial com sede em Marília, voltado para oferecer soluções jurídicas estratégicas e personalizadas para empresas de diversos setores. Nossa equipe altamente qualificada tem ampla experiência nas áreas Tributária, Cível e Trabalhista, atuando na elaboração de defesas administrativas e judiciais nas esferas federal, estadual e municipal.
-
                 Nosso escritório foi fundado com base na expertise do contador Francisco Gomes Sobrinho, e ao longo dos anos, consolidou-se como referência em assessoria jurídica empresarial. Contamos com uma equipe de advogados especializados, incluindo o Dr. Glauco Marcelo Marques, advogado especialista em Direito Empresarial e Mestre em Direito e Estado na Era Digital.
                 
                 Com mais de 10 anos de assessoria a empresas renomadas, como Brunnschweiler Latina Ltda, Comasa Comercial Mariliense de Automóveis Ltda, CWA Indústria Metalúrgica Ltda, Intercoffee Comércio e Indústria Ltda – Café América, entre outras, a Aconsel destaca-se pelo compromisso com a qualidade e a segurança jurídica de seus clientes.
@@ -139,7 +151,7 @@
    <section class="contact" id="contact">
     <h2 class="heading">Entre em contato <span>Comigo</span></h2>
 
-    <form action="https://formsubmit.co/lucasmatheussouza53@gmail.com" method="POST">
+    <form action="https://formsubmit.co/lucasmatheussouza53@gmail.com" method="POST" onsubmit="setFormSubmitted()">
         <div class="input-box">
             <input type="text" placeholder="Nome Completo" name="Nome" required>
             <input type="email" placeholder="Email" name="Email" required>
@@ -154,7 +166,7 @@
 
         <input type="hidden" name="_subject" value="Tem um cliente entrando em contato com voce Glaucão!">
         <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="http://localhost:5500/index.html">
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
         <input type="hidden" name="_captcha" value="false">
         
     </form>
@@ -162,6 +174,7 @@
    </section>
 
    <footer class="footer">
+    <div class="item">
         <div class="social">
             <a href="https://www.instagram.com/drmarquesglaucomarcelo/" target="_blank">
                 <i class='bx bxl-instagram' ></i>
@@ -175,8 +188,8 @@
         </div>
 
         <div class="celular">
-            <span>Tel. Fixo:(14)3413-4450</span>
-            <span>Celular: (14)99797-2430</span>
+            <span>Telefone Fixo +55 14 3113-4450</span> <br>
+            <span>Celular 55 14 99797-2430</span>
         </div>
 
         <div class="endereco">
@@ -184,10 +197,13 @@
                 <span class="rua">Rua: Palmares,173 - Sala 01, Boa Vista Marilia - SP | 17501-510</span>
             </a> 
         </div>
-        <div class="copyright">
-            Lucas
-        </div>
+        <!-- <div class="copyright">
+            Lucas Marques
+        </div> -->
+    </div>
    </footer>
+
+   
    
 </body>
 </html>
