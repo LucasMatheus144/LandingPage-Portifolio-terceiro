@@ -36,6 +36,7 @@ body{
 }
 
 .custom-alerta {
+    display: none;
     position: fixed;
     top: 70px;
     right: 10px;
@@ -178,7 +179,7 @@ body{
     color: var(--text--color);
     margin-left: 4rem;
     font-weight: 500;
-    transition: 0.3s ease;
+    transition: 0.6s ease;
     border-bottom: 3px solid transparent;
 }
 
@@ -307,6 +308,8 @@ span{
 
 .text-animation span{
     position: relative;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .text-animation span::before{
@@ -323,7 +326,7 @@ span{
     height: 100%;
     border-left: 3px solid var(--bg-color);
     right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(16) infinite;
+    animation: cursor 2s infinite, typing 20s steps(19) infinite;
 }
 @keyframes cursor{
     to{
@@ -332,24 +335,38 @@ span{
 }
 
 @keyframes words {
-    0%, 33.3% {
-        content: "Advogado Empresarial";
+    0%, 32% {
+        content: "Advogado Empresarial";/*19*/
     }
-    34.3%, 66.3% {
-        content: "Advogado Tributário";
+    33%, 65% {
+        content: "Advogado Tributário"; /*19*/
     }
-    67.3%, 100% {
-        content: "Advogado Civil";
+    66%, 100% {
+        content: "Advogado Civil";/*14*/
     }
 }
+
+
 @keyframes typing {
-    0%, 33%, 66% , 100%{
-        width: 0;
-    }
-    3.3%, 9%, 34.3%, 67.3% {
-        width: calc(100% + 8px);
-    }
+    /* Palavra 1: 0% → 32% */
+    0% { width: 0; }
+    14% { width: calc(19ch + 8px); } /* digita */
+    31% { width: calc(19ch + 8px); } /* mantém visível um pouco */
+    32% { width: 0; } /* apaga no finalzinho */
+
+    /* Palavra 2: 33% → 65% */
+    33% { width: 0; }
+    46% { width: calc(18ch + 8px); }
+    64% { width: calc(18ch + 8px); }
+    65% { width: 0; }
+
+    /* Palavra 3: 66% → 100% */
+    66% { width: 0; }
+    80% { width: calc(13ch + 8px); }
+    99% { width: calc(13ch + 8px); }
+    100% { width: 0; }
 }
+
 
 ::-webkit-scrollbar{
     width: 15px;
@@ -630,6 +647,10 @@ span{
         font-size: 4.5rem;
     }
 
+    .home-content h1{
+        font-size: 2.5rem;
+    }
+
     .services-container{
         padding-bottom: 7rem;
         grid-template-columns: repeat(1,1fr);
@@ -646,6 +667,11 @@ span{
     .footer{
         padding: 2rem 3%;
     }
+
+    .text-animation {
+        font-size: 18px;
+    }
+    
     
 }
 
@@ -655,6 +681,10 @@ span{
     }
     section{
         padding: 10rem 3% 2rem;
+    }
+
+    .home-content h1{
+        font-size: 2.2rem;
     }
 
     .social-icons a{
@@ -713,7 +743,7 @@ span{
         font-size: 2.6rem;
     }
     .home-content h1{
-        font-size: 8rem;
+        font-size: 3.5rem;
         margin-top: 3rem;
     }
     .heading h2{
@@ -721,8 +751,9 @@ span{
         font-size: 1.6rem;
     }
     .home-content p{
-        max-width: 600px;
+        position: relative;
         margin: 0 auto;
+        font-size: 1.5em;
     }
     .home-img img{
         width: 48w;
@@ -730,6 +761,10 @@ span{
     }
     .services h2{
         margin-bottom: 3rem;
+    }
+    
+    .testimonials-item p{
+        font-size: 1.5em;
     }
 
     .social-icons a{
@@ -798,13 +833,14 @@ span{
     }
 
     .home-content h1 {
-        font-size: 6rem;
+        font-size: 4.5rem;
         margin-top: 2rem;
     }
 
     .home-content p {
-        font-size: 1.5rem;
-        max-width: 90%;
+        position: relative;
+        font-size: 1.5em;
+        max-width: 85%;
     }
 
     .home-img img {
@@ -822,7 +858,7 @@ span{
     }
 
     .service-box {
-        height: 390px;
+        height: 380px;
     }
 
     .service-info {
@@ -864,11 +900,14 @@ span{
     }
 
     .home-content h1 {
-        font-size: 4.5rem;
+        max-width: 6px;
+        font-size: 3.5rem;
     }
 
+
     .home-content p {
-        font-size: 1.4rem;
+        position: relative;
+        font-size: 1.6rem;
     }
 
     .home-img img {
@@ -876,8 +915,8 @@ span{
     }
 
     .social-icons a{
-        width: 6.5rem;
-        height: 6.5rem;
+        width: 5.5rem;
+        height: 5.5rem;
         font-size: 4.5rem;
     }
 
@@ -885,12 +924,12 @@ span{
         padding: 0 2rem;
     }
 
-    .services p{
-        font-size: 1.3rem;
+    .service-info p{
+        font-size: 1.5rem;
     }
 
     .service-box {
-        height: 430px;
+        height: 360px;
     }
 
 
@@ -907,4 +946,5 @@ span{
         padding: 2rem 4%;
     }
 }
+
 

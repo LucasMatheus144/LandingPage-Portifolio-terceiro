@@ -99,3 +99,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon");
+    const navbar = document.querySelector(".navbar");
+
+    menuIcon.addEventListener("click", function (event) {
+        navbar.classList.toggle("active");
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!navbar.contains(event.target) && !menuIcon.contains(event.target)) {
+            navbar.classList.remove("active");
+        }
+    });
+});
+
+function hideAlert() {
+    var alerta = document.getElementById('Alerta');
+    if (alerta) {
+        alerta.classList.remove('active'); 
+        setTimeout(() => {
+            alerta.style.display = 'none';
+        }, 500);
+    }
+}
