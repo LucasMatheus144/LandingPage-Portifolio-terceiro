@@ -36,6 +36,7 @@ body{
 }
 
 .custom-alerta {
+    display: none;
     position: fixed;
     top: 70px;
     right: 10px;
@@ -143,6 +144,7 @@ body{
 
 /*end pop up*/
 
+
 .header{
     position: fixed;
     top: 0;
@@ -178,7 +180,7 @@ body{
     color: var(--text--color);
     margin-left: 4rem;
     font-weight: 500;
-    transition: 0.3s ease;
+    transition: 0.6s ease;
     border-bottom: 3px solid transparent;
 }
 
@@ -255,7 +257,6 @@ span{
 
 .home-content p{
     font-size: 1.3rem;
-    font-weight: 500;
     max-width: 1000px;
 }
 
@@ -305,51 +306,9 @@ span{
     min-width: 280px;
 }
 
-.text-animation span{
-    position: relative;
-}
 
-.text-animation span::before{
-    content: "Advogado";
-    color: var(--main-color);
-    animation: words 20s infinite;
-}
 
-.text-animation span::after{
-    content: "";
-    background-color: var(--bg-color);
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid var(--bg-color);
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(16) infinite;
-}
-@keyframes cursor{
-    to{
-        border-left: 2px solid var(--main-color);
-    }
-}
 
-@keyframes words {
-    0%, 33.3% {
-        content: "Advogado Empresarial";
-    }
-    34.3%, 66.3% {
-        content: "Advogado Tributário";
-    }
-    67.3%, 100% {
-        content: "Advogado Civil";
-    }
-}
-@keyframes typing {
-    0%, 33%, 66% , 100%{
-        width: 0;
-    }
-    3.3%, 9%, 34.3%, 67.3% {
-        width: calc(100% + 8px);
-    }
-}
 
 ::-webkit-scrollbar{
     width: 15px;
@@ -424,6 +383,16 @@ span{
     font-weight: 400;
     max-height: 100px;
     margin: auto;
+}
+
+.historia p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: auto;
+}
+
+.paragrafo{
+    text-indent: 40px;
 }
 
 .testimonials{
@@ -613,7 +582,7 @@ span{
 }
 
 .footer .rua {
-
+    text-decoration: underline;
     font-size: 16px;
     color: white;
 }
@@ -628,6 +597,10 @@ span{
         width: 5.5rem;
         height: 5.5rem;
         font-size: 4.5rem;
+    }
+
+    .home-content h1{
+        font-size: 2.5rem;
     }
 
     .services-container{
@@ -646,6 +619,11 @@ span{
     .footer{
         padding: 2rem 3%;
     }
+
+    .text-animation {
+        font-size: 18px;
+    }
+    
     
 }
 
@@ -655,6 +633,10 @@ span{
     }
     section{
         padding: 10rem 3% 2rem;
+    }
+
+    .home-content h1{
+        font-size: 2.2rem;
     }
 
     .social-icons a{
@@ -713,7 +695,7 @@ span{
         font-size: 2.6rem;
     }
     .home-content h1{
-        font-size: 8rem;
+        font-size: 3.5rem;
         margin-top: 3rem;
     }
     .heading h2{
@@ -721,8 +703,9 @@ span{
         font-size: 1.6rem;
     }
     .home-content p{
-        max-width: 600px;
+        position: relative;
         margin: 0 auto;
+        font-size: 1.5em;
     }
     .home-img img{
         width: 48w;
@@ -730,6 +713,10 @@ span{
     }
     .services h2{
         margin-bottom: 3rem;
+    }
+    
+    .testimonials-item p{
+        font-size: 1.5em;
     }
 
     .social-icons a{
@@ -798,13 +785,13 @@ span{
     }
 
     .home-content h1 {
-        font-size: 6rem;
+        font-size: 4.5rem;
         margin-top: 2rem;
     }
 
     .home-content p {
-        font-size: 1.5rem;
-        max-width: 90%;
+        position: relative;
+        font-size: 1.5em;
     }
 
     .home-img img {
@@ -822,7 +809,7 @@ span{
     }
 
     .service-box {
-        height: 390px;
+        height: 380px;
     }
 
     .service-info {
@@ -864,11 +851,14 @@ span{
     }
 
     .home-content h1 {
-        font-size: 4.5rem;
+        max-width: 6px;
+        font-size: 3.5rem;
     }
 
+
     .home-content p {
-        font-size: 1.4rem;
+        position: relative;
+        font-size: 1.6rem;
     }
 
     .home-img img {
@@ -876,8 +866,8 @@ span{
     }
 
     .social-icons a{
-        width: 6.5rem;
-        height: 6.5rem;
+        width: 5.5rem;
+        height: 5.5rem;
         font-size: 4.5rem;
     }
 
@@ -885,14 +875,19 @@ span{
         padding: 0 2rem;
     }
 
-    .services p{
-        font-size: 1.3rem;
+    .service-info p{
+        font-size: 1.5rem;
     }
 
     .service-box {
-        height: 430px;
+        height: 360px;
     }
 
+    
+    .historia p{
+        font-size: 1.5em;
+        max-width: 85%;
+    }
 
     .testimonials-item {
         padding: 2rem;
@@ -907,4 +902,5 @@ span{
         padding: 2rem 4%;
     }
 }
+
 

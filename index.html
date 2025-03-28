@@ -11,7 +11,7 @@
 </head>
 <body>
     
-    <div class="custom-alerta success" id="Alerta">
+    <div class="custom-alerta success active" id="Alerta">
         <div class="alerta-content">
             <i class="fas fa-check check"></i>
             <div class="message">
@@ -22,18 +22,17 @@
         <i class="fa-solid fa-xmark close" onclick="hideAlert()"></i>
         <div class="progress active"></div>
     </div>
-
-    
     
     <header class="header">
-        <a href="#" class="logo"><span>Glauco Marques</span></a>
+        <a href="#home" class="logo"><span>Dr.Marques - Glauco Marcelo</span></a>
         
         <i class="bx bx-menu" id="menu-icon"></i>
 
         <nav class="navbar">
             <a href="#home">Inicio</a>
+            <a href="#historia">História</a>
             <a href="#service">Atuação</a>
-            <a href="#testimonials">Associado</a>
+            <a href="#testimonials">Parceiro</a>
             <a href="#contact">Contato</a>
         </nav>
     </header>
@@ -43,13 +42,14 @@
             <img src="assets/imgs/glauco.jpg" alt="">
         </div>
         <div class="home-content">
-            <h1>Olá, sou o <span>Glauco</span></h1>
-            <h3 class="text-animation">E eu sou <span></span></h3>
+              <!-- <h1>Olá, sou o <span>Glauco</span></h1> -->
+            <h1 class="text-animation"> Advogado  
+                <a class="typewrite" data-period="2000" data-type='[ "Empresarial", "Tributário", "Trabalhista", "Civil" ]'></a><span class="wrap"></span>
+            </h1>
+
             <p>Sou um dos sócios da Aconsel, um escritório de advocacia empresarial com sede em Marília, voltado para oferecer soluções jurídicas estratégicas e personalizadas para empresas de diversos setores. Nossa equipe altamente qualificada tem ampla experiência nas áreas Tributária, Cível e Trabalhista, atuando na elaboração de defesas administrativas e judiciais nas esferas federal, estadual e municipal.
                 Nosso escritório foi fundado com base na expertise do contador Francisco Gomes Sobrinho, e ao longo dos anos, consolidou-se como referência em assessoria jurídica empresarial. Contamos com uma equipe de advogados especializados, incluindo o Dr. Glauco Marcelo Marques, advogado especialista em Direito Empresarial e Mestre em Direito e Estado na Era Digital.
-                
                 Com mais de 10 anos de assessoria a empresas renomadas, como Brunnschweiler Latina Ltda, Comasa Comercial Mariliense de Automóveis Ltda, CWA Indústria Metalúrgica Ltda, Intercoffee Comércio e Indústria Ltda – Café América, entre outras, a Aconsel destaca-se pelo compromisso com a qualidade e a segurança jurídica de seus clientes.
-                
                 Nosso objetivo é garantir um atendimento eficiente e estratégico para pequenas, médias e grandes empresas, antecipando desafios jurídicos e contribuindo para o crescimento sustentável dos negócios de nossos clientes.
                 
                 Se precisar de assessoria jurídica especializada, estamos à disposição para oferecer um suporte jurídico sólido e confiável.
@@ -64,12 +64,28 @@
                 <a href="https://www.linkedin.com/in/lucas-matheus-613b4721a/"  target="_blank">
                     <i class='bx bxl-linkedin' ></i>
                 </a>
+                <a href="http://lattes.cnpq.br/5781231282827792"  target="_blank">
+                    <i class='bx bx-file'></i>
+                </a>
                 <a href="https://linktr.ee/Dr.Marques_Advogado"  target="_blank">
                     <i class='bx bx-link'></i>
                 </a>
             </div>
             <!-- <a href="#" class="btn">Clique AQUI</a> -->
         </div>
+    </section>
+
+    <section class="historia" id="historia">
+        <h2 class="heading">História</h2>
+        <p class="paragrafo">No ano de 1978 o experiente Contador Francisco Gomes Sobrinho, "controller" de importantes empresas do ramo de alimentação e calçados formou-se advogado pela Faculdade de Direito de Marília/SP. Com a união dos advogados Alexandre da Cunha Gomes, Glauco Marcelo Marques, João Batista Capputti, formava-se o primeiro grupo base da Equipe Aconsel, escritório voltado à advocacia empresarial com sede na cidade de Marília.</p>
+        <br>
+        <p>Em 2004, falece o Dr. Francisco deixando seu legado, posteriormente somam-se a equipe a Dra. Kelly Regina Abolis e o Dr. José Eugenio Toffoli Filho, profissionais modernos, atuantes e dedicados à área jurídica com especialidades na área trabalhista. Mais tarde, a equipe se completa com a entrada das profissionais proativos Dra. Giovanna Cayres, Dra. Silvia Ribeiro, Dr. Márcio Pansieri e Dr. Lucas Ragonha.</p>
+        <br>
+        <p>Com o crescimento da equipe, a Aconsel pode disponibilizar a seus clientes atendimento de qualidade, com atuação marcante nas áreas Tributária, Civil, Trabalhista, na elaboração de defesas Administrativas e Judiciais nas esferas federais, estaduais e municipais.</p>
+        <br>
+        <p>O escritório concentra-se em sua vocação de atender pequenas, médias e grandes empresas com dedicação e qualidade de serviços, contribuindo significativamente para a estratégia dos negócios de seus clientes, oferecendo uma visão abrangente e antecipando questões empresariais que se refletem no Direito, destacando-se o ramo de concessionárias de rodovia e de veículos, de transporte Intermunicipais de passageiros, metalúrgicas e alimentos.</p>
+        <br>
+        <p>Pela sua estrutura jurídica e pelo fato do seu corpo de advogados serem todos sócios ou parceiros, o escritório Aconsel possui atendimento aos clientes com total liberdade e autonomia em conjunto ou isoladamente.</p>
     </section>
 
     <section class="service" id="service">
@@ -124,7 +140,7 @@
 
    <section class="testimonials" id="testimonials">
         <div class="testimonials-box">
-            <h2 class="heading">Associado</h2>
+            <h2 class="heading">Parceiro</h2>
             
             <div class="wrapper">
                 <div class="testimonials-item">
@@ -183,13 +199,13 @@
         </div>
 
         <div class="celular">
-            <span>Telefone Fixo +55 14 3113-4450</span> <br>
-            <span>Celular 55 14 99797-2430</span>
+            <span>Telefone Fixo +55 14 3413-3965</span><br>
+            <span>Celular 55 14 99797-4230</span>
         </div>
 
         <div class="endereco">
             <a href="https://maps.app.goo.gl/iSgjcKi2gM4SDXbp6" target="_blank">
-                <span class="rua">Rua: Palmares,173 - Sala 01, Boa Vista Marilia - SP | 17501-510</span>
+                <span class="rua">Rua: Palmares,173 - Boa Vista Marilia - SP | 17501-510</span>
             </a> 
         </div>
         <!-- <div class="copyright">
