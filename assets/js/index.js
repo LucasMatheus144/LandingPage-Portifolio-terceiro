@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 headers: {
                     "Content-Type": "application/json",
                     "Accept": "application/json",
-                    "api-key": "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", 
+                    "api-key": "suakey", 
                 },
                 body: JSON.stringify(emailData),
             });
